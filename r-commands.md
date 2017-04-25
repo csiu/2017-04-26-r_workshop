@@ -48,30 +48,30 @@ syllabus <-
                          sub(".*(\\d{2}).*", "\\1",  href),
                          "00") %>% as.integer()
   )
-) %>% knitr::kable()
+) %>% knitr::kable(format="markdown")
 ```
 
 
 
-label                                   href                           lesson_plan
---------------------------------------  ----------------------------  ------------
-Setup                                   ./setup                                  0
-Introduction to R and RStudio           ./01-rstudio-intro/                      1
-Project Management With RStudio         ./02-project-intro/                      2
-Seeking Help                            ./03-seeking-help/                       3
-Data Structures                         ./04-data-structures-part1/              4
-Exploring Data Frames                   ./05-data-structures-part2/              5
-Subsetting Data                         ./06-data-subsetting/                    6
-Control Flow                            ./07-control-flow/                       7
-Creating Publication-Quality Graphics   ./08-plot-ggplot2/                       8
-Vectorization                           ./09-vectorization/                      9
-Functions Explained                     ./10-functions/                         10
-Writing Data                            ./11-writing-data/                      11
-Split-Apply-Combine                     ./12-plyr/                              12
-Dataframe Manipulation with dplyr       ./13-dplyr/                             13
-Dataframe Manipulation with tidyr       ./14-tidyr/                             14
-Producing Reports With knitr            ./15-knitr-markdown/                    15
-Writing Good Software                   ./16-wrap-up/                           16
+|label                                 |href                        | lesson_plan|
+|:-------------------------------------|:---------------------------|-----------:|
+|Setup                                 |./setup                     |           0|
+|Introduction to R and RStudio         |./01-rstudio-intro/         |           1|
+|Project Management With RStudio       |./02-project-intro/         |           2|
+|Seeking Help                          |./03-seeking-help/          |           3|
+|Data Structures                       |./04-data-structures-part1/ |           4|
+|Exploring Data Frames                 |./05-data-structures-part2/ |           5|
+|Subsetting Data                       |./06-data-subsetting/       |           6|
+|Control Flow                          |./07-control-flow/          |           7|
+|Creating Publication-Quality Graphics |./08-plot-ggplot2/          |           8|
+|Vectorization                         |./09-vectorization/         |           9|
+|Functions Explained                   |./10-functions/             |          10|
+|Writing Data                          |./11-writing-data/          |          11|
+|Split-Apply-Combine                   |./12-plyr/                  |          12|
+|Dataframe Manipulation with dplyr     |./13-dplyr/                 |          13|
+|Dataframe Manipulation with tidyr     |./14-tidyr/                 |          14|
+|Producing Reports With knitr          |./15-knitr-markdown/        |          15|
+|Writing Good Software                 |./16-wrap-up/               |          16|
 
 ## Getting the commands from one page
 
