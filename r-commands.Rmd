@@ -53,7 +53,11 @@ syllabus <-
                          sub(".*(\\d{2}).*", "\\1",  href),
                          "00") %>% as.integer()
   )
-) %>% knitr::kable(format="markdown")
+) %>%
+  mutate(
+    href = sprintf("[%s](%s)", href, paste0(main_url, href))
+  ) %>%
+  knitr::kable(format="markdown")
 ```
 
 ## Getting the commands from one page

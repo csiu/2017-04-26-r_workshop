@@ -48,30 +48,34 @@ syllabus <-
                          sub(".*(\\d{2}).*", "\\1",  href),
                          "00") %>% as.integer()
   )
-) %>% knitr::kable(format="markdown")
+) %>%
+  mutate(
+    href = sprintf("[%s](%s)", href, paste0(main_url, href))
+  ) %>%
+  knitr::kable(format="markdown")
 ```
 
 
 
-|label                                 |href                        | lesson_plan|
-|:-------------------------------------|:---------------------------|-----------:|
-|Setup                                 |./setup                     |           0|
-|Introduction to R and RStudio         |./01-rstudio-intro/         |           1|
-|Project Management With RStudio       |./02-project-intro/         |           2|
-|Seeking Help                          |./03-seeking-help/          |           3|
-|Data Structures                       |./04-data-structures-part1/ |           4|
-|Exploring Data Frames                 |./05-data-structures-part2/ |           5|
-|Subsetting Data                       |./06-data-subsetting/       |           6|
-|Control Flow                          |./07-control-flow/          |           7|
-|Creating Publication-Quality Graphics |./08-plot-ggplot2/          |           8|
-|Vectorization                         |./09-vectorization/         |           9|
-|Functions Explained                   |./10-functions/             |          10|
-|Writing Data                          |./11-writing-data/          |          11|
-|Split-Apply-Combine                   |./12-plyr/                  |          12|
-|Dataframe Manipulation with dplyr     |./13-dplyr/                 |          13|
-|Dataframe Manipulation with tidyr     |./14-tidyr/                 |          14|
-|Producing Reports With knitr          |./15-knitr-markdown/        |          15|
-|Writing Good Software                 |./16-wrap-up/               |          16|
+|label                                 |href                                                                                                       | lesson_plan|
+|:-------------------------------------|:----------------------------------------------------------------------------------------------------------|-----------:|
+|Setup                                 |[./setup](http://swcarpentry.github.io/r-novice-gapminder/./setup)                                         |           0|
+|Introduction to R and RStudio         |[./01-rstudio-intro/](http://swcarpentry.github.io/r-novice-gapminder/./01-rstudio-intro/)                 |           1|
+|Project Management With RStudio       |[./02-project-intro/](http://swcarpentry.github.io/r-novice-gapminder/./02-project-intro/)                 |           2|
+|Seeking Help                          |[./03-seeking-help/](http://swcarpentry.github.io/r-novice-gapminder/./03-seeking-help/)                   |           3|
+|Data Structures                       |[./04-data-structures-part1/](http://swcarpentry.github.io/r-novice-gapminder/./04-data-structures-part1/) |           4|
+|Exploring Data Frames                 |[./05-data-structures-part2/](http://swcarpentry.github.io/r-novice-gapminder/./05-data-structures-part2/) |           5|
+|Subsetting Data                       |[./06-data-subsetting/](http://swcarpentry.github.io/r-novice-gapminder/./06-data-subsetting/)             |           6|
+|Control Flow                          |[./07-control-flow/](http://swcarpentry.github.io/r-novice-gapminder/./07-control-flow/)                   |           7|
+|Creating Publication-Quality Graphics |[./08-plot-ggplot2/](http://swcarpentry.github.io/r-novice-gapminder/./08-plot-ggplot2/)                   |           8|
+|Vectorization                         |[./09-vectorization/](http://swcarpentry.github.io/r-novice-gapminder/./09-vectorization/)                 |           9|
+|Functions Explained                   |[./10-functions/](http://swcarpentry.github.io/r-novice-gapminder/./10-functions/)                         |          10|
+|Writing Data                          |[./11-writing-data/](http://swcarpentry.github.io/r-novice-gapminder/./11-writing-data/)                   |          11|
+|Split-Apply-Combine                   |[./12-plyr/](http://swcarpentry.github.io/r-novice-gapminder/./12-plyr/)                                   |          12|
+|Dataframe Manipulation with dplyr     |[./13-dplyr/](http://swcarpentry.github.io/r-novice-gapminder/./13-dplyr/)                                 |          13|
+|Dataframe Manipulation with tidyr     |[./14-tidyr/](http://swcarpentry.github.io/r-novice-gapminder/./14-tidyr/)                                 |          14|
+|Producing Reports With knitr          |[./15-knitr-markdown/](http://swcarpentry.github.io/r-novice-gapminder/./15-knitr-markdown/)               |          15|
+|Writing Good Software                 |[./16-wrap-up/](http://swcarpentry.github.io/r-novice-gapminder/./16-wrap-up/)                             |          16|
 
 ## Getting the commands from one page
 
@@ -556,7 +560,7 @@ for (i in 1:max(syllabus$lesson_plan)) {
     if (condition is true) {
       perform action
     }
-
+    
     # if ... else
     if (condition is true) {
       perform action
@@ -565,17 +569,17 @@ for (i in 1:max(syllabus$lesson_plan)) {
     }
     # sample a random number from a Poisson distribution
     # with a mean (lambda) of 8
-
+    
     x <- rpois(1, lambda=8)
-
+    
     if (x >= 10) {
       print("x is greater than or equal to 10")
     }
-
+    
     x
     set.seed(10)
     x <- rpois(1, lambda=8)
-
+    
     if (x >= 10) {
       print("x is greater than or equal to 10")
     } else if (x > 5) {
@@ -654,7 +658,7 @@ for (i in 1:max(syllabus$lesson_plan)) {
     > >
     for( iContinent in unique(gapminder$continent) ){
        tmp <- mean(subset(gapminder, continent==iContinent)$lifeExp)
-
+       
        if(tmp < thresholdValue){
            cat("Average Life Expectancy in", iContinent, "is less than", thresholdValue, "\n")
        }
@@ -666,10 +670,10 @@ for (i in 1:max(syllabus$lesson_plan)) {
     > >
      lowerThreshold <- 50
      upperThreshold <- 70
-
+     
     for( iCountry in unique(gapminder$country) ){
         tmp <- mean(subset(gapminder, country==iCountry)$lifeExp)
-
+        
         if(tmp < lowerThreshold){
             cat("Average Life Expectancy in", iCountry, "is less than", lowerThreshold, "\n")
         }
@@ -687,10 +691,10 @@ for (i in 1:max(syllabus$lesson_plan)) {
     > >
     for( iCountry in candidateCountries){
         tmp <- mean(subset(gapminder, country==iCountry)$lifeExp)
-
+        
         if(tmp < thresholdValue){
             cat("Average Life Expectancy in", iCountry, "is less than", thresholdValue, "plotting life expectancy graph... \n")
-
+            
             with(subset(gapminder, country==iCountry),
                     plot(year,lifeExp,
                          type="o",
@@ -813,7 +817,7 @@ for (i in 1:max(syllabus$lesson_plan)) {
       kelvin <- ((temp - 32) * (5 / 9)) + 273.15
       return(kelvin)
     }
-
+    
     kelvin_to_celsius <- function(temp) {
       celsius <- temp - 273.15
       return(celsius)
@@ -840,7 +844,7 @@ for (i in 1:max(syllabus$lesson_plan)) {
         dat <- dat[dat$country %in% country,]
       }
       gdp <- dat$pop * dat$gdpPercap
-
+    
       new <- cbind(dat, gdp=gdp)
       return(new)
     }
@@ -874,12 +878,12 @@ for (i in 1:max(syllabus$lesson_plan)) {
     pdf("Life_Exp_vs_time.pdf", width=12, height=4)
     ggplot(data=gapminder, aes(x=year, y=lifeExp, colour=country)) +
       geom_line()
-
+    
     # You then have to make sure to turn off the pdf device!
-
+    
     dev.off()
     aust_subset <- gapminder[gapminder$country == "Australia",]
-
+    
     write.table(aust_subset,
       file="cleaned-data/gapminder-aus.csv",
       sep=","
@@ -903,7 +907,7 @@ for (i in 1:max(syllabus$lesson_plan)) {
         dat <- dat[dat$country %in% country,]
       }
       gdp <- dat$pop * dat$gdpPercap
-
+    
       new <- cbind(dat, gdp=gdp)
       return(new)
     }
@@ -992,7 +996,7 @@ for (i in 1:max(syllabus$lesson_plan)) {
     lifeExp_bycountry <- gapminder %>%
        group_by(country) %>%
        summarize(mean_lifeExp=mean(lifeExp))
-    lifeExp_bycountry %>%
+    lifeExp_bycountry %>% 
        filter(mean_lifeExp == min(mean_lifeExp) | mean_lifeExp == max(mean_lifeExp))
     lifeExp_bycountry %>%
        arrange(mean_lifeExp) %>%
@@ -1025,21 +1029,21 @@ for (i in 1:max(syllabus$lesson_plan)) {
     # Make the plot
     ggplot(data = az.countries, aes(x = year, y = lifeExp, color = continent)) +
       geom_line() + facet_wrap( ~ country)
-    gapminder %>%
-       # Get the start letter of each country
-       mutate(startsWith = substr(country, start = 1, stop = 1)) %>%
+    gapminder %>% 
+       # Get the start letter of each country 
+       mutate(startsWith = substr(country, start = 1, stop = 1)) %>% 
        # Filter countries that start with "A" or "Z"
        filter(startsWith %in% c("A", "Z")) %>%
        # Make the plot
-       ggplot(aes(x = year, y = lifeExp, color = continent)) +
-       geom_line() +
+       ggplot(aes(x = year, y = lifeExp, color = continent)) + 
+       geom_line() + 
        facet_wrap( ~ country)
     gapminder %>%
         # Filter countries that start with "A" or "Z"
     	filter(substr(country, start = 1, stop = 1) %in% c("A", "Z")) %>%
     	# Make the plot
-    	ggplot(aes(x = year, y = lifeExp, color = continent)) +
-    	geom_line() +
+    	ggplot(aes(x = year, y = lifeExp, color = continent)) + 
+    	geom_line() + 
     	facet_wrap( ~ country)
     lifeExp_2countries_bycontinents <- gapminder %>%
        filter(year==2002) %>%
