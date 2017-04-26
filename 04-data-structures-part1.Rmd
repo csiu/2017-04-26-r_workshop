@@ -49,6 +49,7 @@ as.logical(character_coerced_to_numeric)
 
 - Read in data: `read.csv`, `read.delim`, `read.table`
 - Pull out columns by `$` 
+- columns in a data frame are vectors that are the same length
 
 ## Inspecting an object
 
