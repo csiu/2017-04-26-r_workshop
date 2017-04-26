@@ -1,0 +1,56 @@
+# 07 Control Flow
+csiu  
+
+
+
+```
+OBJECTIVES
+- Write conditional statements with if() and else().
+- Write and understand for() loops.
+```
+
+## if/else statements
+
+- IF true->do something:
+
+```r
+# if-statement
+if (condition is true) {
+  perform action
+}
+```
+
+- IF true->do something, ELSE do something else
+
+```r
+# if/else-statement
+if (condition is true) {
+  perform action
+} else {  # that is, if the condition is false,
+  perform alternative action
+}
+```
+
+## for loops
+
+- FOR-loops for iterating over a set of values
+
+
+```r
+for(iterator in set of values){
+  do a thing
+}
+```
+
+- don't grow your results (computationally inefficient)
+    - better way is to define empty output object and fill in the values
+    
+- WHILE-loops are used to repeat an operation until a certain condition is met
+
+
+```r
+while(this condition is true){
+  do a thing
+}
+```
+
