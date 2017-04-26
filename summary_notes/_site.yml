@@ -1,0 +1,28 @@
+name: "2017-04-26-r_workshop"
+output_dir: "../www"
+
+navbar:
+  title: "2017-04-26-r_workshop"
+  left:
+    - text: "Summary notes"
+      menu:
+      - text: "01: Introduction to R and RStudio"
+        href: 01-rstudio-intro.html
+      - text: "02: Project Management With RStudio"
+        href: 02-project-intro.html
+      - text: "03: Seeking Help"
+        href: 03-seeking-help.html
+      - text: "04: Data Structures"
+        href: 04-data-structures-part1.html
+      - text: "05: Exploring Data Frames"
+        href: 05-data-structures-part2.html
+      - text: "06: Subsetting Data"
+        href: 06-data-subsetting.html
+      - text: "07: Control Flow"
+        href: 07-control-flow.html
+      - text: "08: Creating Publication-Quality Graphics"
+        href: 08-plot-ggplot2.html
+      - text: "09: Vectorization"
+        href: 09-vectorization.html
+      - text: "10: Functions Explained"
+        href: 10-functions.html

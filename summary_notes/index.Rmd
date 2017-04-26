@@ -1,0 +1,4 @@
+
+Based on the [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/).
+
+See: https://github.com/csiu/2017-04-26-r_workshop
