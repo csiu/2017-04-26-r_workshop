@@ -67,7 +67,14 @@ OBJECTIVES
     - packages on github
 - R and RStudio have functionality for managing packages:
     - You can see what packages are installed by typing `installed.packages()`
-    - You can install packages by typing `install.packages("packagename")`, where `packagename` is the package name, in quotes.
-    - You can update installed packages by typing `update.packages()`
-    - You can remove a package with `remove.packages("packagename")`
-    - You can make a package available for use with `library(packagename)`
+
+
+```r
+# We use packagename
+
+install.packages("packagename") # install package
+update.packages("packagename")  # update installed package
+remove.packages("packagename")  # remove package
+
+library(packagename) # load package to make package available
+```
