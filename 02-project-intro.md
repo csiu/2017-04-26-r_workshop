@@ -1,0 +1,34 @@
+# Project Management With RStudio
+csiu  
+
+
+
+```
+OBJECTIVES
+To be able to create self-contained projects in RStudio
+To be able to use git from within RStudio
+```
+
+## R projects
+
+- "File" -> "New Project"
+- Best practices for project organization
+    - Treat raw data as read-only.
+    - Treat generated output as disposable
+    - Separate function definition and application (as to avoid duplication)
+    - Use version control
+
+
+```r
+doc/      # documents
+data/     # raw data & metadata
+results/  # files generated during cleanup & analysis
+src/      # scripts
+bin/      # other and compiled programs
+```
+
+
+## Git
+
+- Use it
+- `.gitignore` file to tell git what files to ignore
