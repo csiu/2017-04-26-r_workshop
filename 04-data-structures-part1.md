@@ -1,0 +1,59 @@
+# 04 Data Structures
+csiu  
+
+
+
+```
+OBJECTIVES
+- To be aware of the different types of data.
+- To begin exploring data frames, and understand how they are related to vectors, factors and lists.
+- To be able to ask questions from R about the type, class, and structure of an object.
+```
+
+## Types of data
+
+- 5 main basic types of data
+    - double
+    - integer
+    - complex
+    - logical
+    - character
+- Data structures
+    - data frames: think table and each column can be a different basic type
+    - vector: ordered list of things
+        - `c()` append things to an existing vector
+    - factor: look like character data, but are typically used to represent categorical information
+        - R has replaced our human-readable categories with numbered indices under the hood
+        - default factors are labelled in alphabetical order
+    - lists: can put anything in it
+    - matrices: table of numbers
+
+- Type coercion
+    - when R encounters a mix of types (here numeric and character) to be combined into a single vector, it will force them all to be the same type
+    - coercion rules go: logical -> integer -> numeric -> complex -> character
+
+
+```r
+# force coercion against the flow with "as." functions
+as.numeric(character_vector_example)
+as.logical(character_coerced_to_numeric)
+```
+
+## Data frames
+
+- Read in data: `read.csv`, `read.delim`, `read.table`
+- Pull out columns by `$` 
+
+## Inspecting an object
+
+
+```r
+sequence_example <- seq(10)
+
+head(sequence_example, n=2)
+tail(sequence_example, n=4)
+length(sequence_example)
+class(sequence_example)
+typeof(sequence_example)
+str(sequence_example)
+```
