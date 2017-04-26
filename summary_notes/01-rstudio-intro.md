@@ -70,7 +70,7 @@ OBJECTIVES
 
 
 ```r
-# We use packagename
+# Let 'packagename' stand for a package
 
 install.packages("packagename") # install package
 update.packages("packagename")  # update installed package
