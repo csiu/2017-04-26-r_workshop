@@ -7,7 +7,7 @@
 
 
 
-I’ll be teaching an R workshop based on the [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/) Software Carpentry lesson plan (lessons 1-10). The estimated teaching time (hrs) is:
+I’ll be teaching an R workshop based on the [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/) Software Carpentry lesson plan (lessons 1-10). The total estimated teaching and exercise time is more than 7 hrs (which is more than the allocated time) and so the purpose of this repo is to contain summary notes.
 
 
 ```
@@ -15,7 +15,7 @@ I’ll be teaching an R workshop based on the [R for Reproducible Scientific Ana
 ##      5.500000      2.333333      7.833333
 ```
 
-### My summary notes:
+### Summary notes:
 
 - [01: Introduction to R and RStudio](summary_notes/01-rstudio-intro.md)
 - [02: Project Management With RStudio](summary_notes/02-project-intro.md)
