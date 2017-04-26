@@ -5,8 +5,8 @@ csiu
 
 ```
 OBJECTIVES
-To be able to create self-contained projects in RStudio
-To be able to use git from within RStudio
+- To be able to create self-contained projects in RStudio
+- To be able to use git from within RStudio
 ```
 
 ## R projects
