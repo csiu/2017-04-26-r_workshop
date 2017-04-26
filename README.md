@@ -16,3 +16,5 @@ I’ll be teaching an R workshop based on the [R for Reproducible Scientific Ana
 ```
 
 I don't have that long, so in this repo I will condense down the lesson.
+
+A list of R commands (parsed from the lessons) is found in [r-commands.md](r-commands.md).
